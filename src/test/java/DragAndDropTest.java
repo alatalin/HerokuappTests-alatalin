@@ -9,14 +9,14 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DragAndDropTest {
     @BeforeAll
-    static void SetupBeforeTest() {
+    static void setupBeforeTest() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://the-internet.herokuapp.com";
         Configuration.pageLoadStrategy = "eager";
     }
 
     @Test
-    void DragAndDropMoveElementTest (){
+    void dragAndDropMoveElementTest (){
         open("/drag_and_drop");
         $("#column-a").shouldHave(text("A"));
         $("#column-b").shouldHave(text("B"));
@@ -27,7 +27,7 @@ public class DragAndDropTest {
     }
 
     @Test
-    void DragAndDropCommandTest () {
+    void dragAndDropCommandTest () {
         open("/drag_and_drop");
         $("#column-a").shouldHave(text("A"));
         $("#column-b").shouldHave(text("B"));
